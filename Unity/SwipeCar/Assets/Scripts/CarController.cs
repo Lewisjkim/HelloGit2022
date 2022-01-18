@@ -27,6 +27,8 @@ public class CarController : MonoBehaviour
             float swipelength = this.endPos.x - this.startPos.x;
             this.speed = swipelength / 500;
 
+            //마우스를 땟을때 효과음 재생
+            GetComponent<AudioSource>().Play();
             
         }
         this.transform.Translate(this.speed, 0, 0); //x축으로 이동한다

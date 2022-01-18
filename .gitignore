@@ -7,6 +7,7 @@
 *.sln.docstates
 
 # Build results
+
 Temp/
 Logs/
 obj/
@@ -48,7 +49,7 @@ x64/
 *.svclog
 *.scc
 .vsconfig
-
+.apk
 # Visual C++ cache files
 ipch/
 *.aps
