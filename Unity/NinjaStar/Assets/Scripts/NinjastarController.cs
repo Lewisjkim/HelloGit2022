@@ -6,7 +6,7 @@ public class NinjastarController : MonoBehaviour
 {
     float speed = 0;
     float rotSpeed = 0;
-    Vector2 startPos;
+    Vector3 startPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,18 +24,18 @@ public class NinjastarController : MonoBehaviour
         //마우스를 때면
         else if (Input.GetMouseButtonUp(0))
         {
-            Vector2 endPos = Input.mousePosition;//종료 지점 지정
+            Vector3 endPos = Input.mousePosition;//종료 지점 지정
             float swipelength = endPos.y - this.startPos.y;//스와이프렝스 정의
-            this.speed = swipelength / 800.0f;//이동 속도 초기화
-            transform.Translate(0, 1, 0, Space.World);
-            //transform.Translate(0, this.speed, 0); //y축 방향으로 이동
-            this.rotSpeed = 10;
-            transform.Rotate(0, 0, this.rotSpeed);
 
+            this.speed = (swipelength / 30.0f)*Time.deltaTime;//이동 속도 초기화
+            
+            
         }
+        this.rotSpeed = 20;
+        transform.Rotate(new Vector3(0, 0, this.rotSpeed));
+        transform.Translate(new Vector3(0, this.speed,0),Space.World);//스피드
         this.speed *= 0.98f;
         
-        this.rotSpeed *= 0.96f;
         
     }
 }
