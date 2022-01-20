@@ -1,23 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ArrowController : MonoBehaviour
 {
     GameObject hpGauge;
     PlayerController player;
+    GameDirector gameDirector;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.player = GameObject.Find("player").GetComponent<PlayerController>();
+        this.player = GameObject.Find("dochi").GetComponent<PlayerController>();
         this.hpGauge = GameObject.Find("hpGauge");
+        this.gameDirector = GameObject.FindObjectOfType<GameDirector>();
     }
-    
+
+    public float speed = 1.0f;
+    public void Init(float speed, Vector3 initPos)
+    {
+        //Start보다 먼저 호출됨 
+        this.speed = speed;
+        this.transform.position = initPos;
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
+        if (this.gameDirector.isGameOver) return;
         transform.Translate(0, -0.1f, 0);//속도 -0.1로 떨어진다
         
         if (transform.position.y< -4.03f)//-4.03에 도착하면 사라진다
@@ -37,7 +50,7 @@ public class ArrowController : MonoBehaviour
         {
             //GameObject director = GameObject.Find("GameDirector");//gamedirector에게 맞으면 피깍이게
             //director.GetComponent<GameDirector>().DecreaseHp();
-
+            this.hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
             this.player.Hit(1);
 
             Destroy(gameObject);//화살을 제거
