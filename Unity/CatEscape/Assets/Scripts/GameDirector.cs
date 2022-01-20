@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+
+
 
 public class GameDirector : MonoBehaviour
 {
@@ -10,7 +14,7 @@ public class GameDirector : MonoBehaviour
     GameObject hpGauge;
     
     GameObject gameoverGo;
-
+    GameObject restart;
     public Text txtHpGaugePercentage;
 
 
@@ -19,10 +23,13 @@ public class GameDirector : MonoBehaviour
     {
         
         //this.arrowPrefab = GameObject.Find("arrowPrefab");
-        this.playerGo = GameObject.Find("player");
+        this.playerGo = GameObject.Find("dochi");
+        //this.playerGo = GameObject.Find("mouse");
         this.hpGauge = GameObject.Find("hpGauge");
         this.gameoverGo = GameObject.Find("GameOver");
+        this.restart = GameObject.Find("ReStart");
         gameoverGo.SetActive(false);//안보이게하기
+        restart.SetActive(false);
 
         var playerController = this.playerGo.GetComponent<PlayerController>();
 
@@ -48,24 +55,31 @@ public class GameDirector : MonoBehaviour
             this.isGameOver = true;
             Debug.Log("GAME OVER");
             gameoverGo.SetActive(true);
+            restart.SetActive(true);
         }
     }
 
+
+    
+    //{
+    //    
+    //}
+
     //private void Update()
     //{
-        
+
     //}
 
     //public void DecreaseHp()
     //{
     //    this.hpGauge.GetComponent<Image>().fillAmount -= 0.1f;
-        
+
     //    if(this.hpGauge.GetComponent<Image>().fillAmount == 0f)
     //    {
     //        GameOver.SetActive(true);//게임오버 활성화
     //        //this.arrowPrefab.SetActive(false);
     //    }
     //}
-    
-    
+
+
 }

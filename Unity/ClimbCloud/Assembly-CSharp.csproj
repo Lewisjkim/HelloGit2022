@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{6DD6A6FF-9664-2BEB-A923-41918087432D}</ProjectGuid>
+    <ProjectGuid>{16EB93F7-CE20-D290-4F2B-0758B19E07CB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,15 +53,8 @@
     <UnityVersion>2020.3.25f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\ArrowGenerator.cs" />
-    <Compile Include="Assets\Scripts\ArrowController.cs" />
-    <Compile Include="Assets\Scripts\SetTime.cs" />
-    <Compile Include="Assets\Scripts\GameDirector.cs" />
-    <Compile Include="Assets\Scripts\RestartButtonClick.cs" />
-    <Compile Include="Assets\LobbyScripts\LobbyMain.cs" />
-    <Compile Include="Assets\LobbyScripts\ChooseHero.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
