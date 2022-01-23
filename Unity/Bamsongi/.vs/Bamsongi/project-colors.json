@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fd5c9fd2-2b5a-81db-d9c7-268a039e65b5": {
+      "ProjectGuid": "fd5c9fd2-2b5a-81db-d9c7-268a039e65b5",
+      "DisplayName": "Assembly-CSharp-firstpass",
+      "ColorIndex": 0
+    },
+    "761cc3d8-79b2-6f0c-c51b-e3a14e29243c": {
+      "ProjectGuid": "761cc3d8-79b2-6f0c-c51b-e3a14e29243c",
+      "DisplayName": "Assembly-CSharp",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "기타 파일",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}
